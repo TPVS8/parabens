@@ -25,7 +25,8 @@
             border-radius: 15px;
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
             animation: float 3s infinite ease-in-out;
-            max-width: 500px;
+            max-width: 500px; /* Tamanho máximo em telas maiores */
+            width: 90%; /* Garante um ajuste responsivo */
         }
 
         .card h1 {
@@ -46,6 +47,22 @@
             }
             50% {
                 transform: translateY(-15px); /* Efeito flutuante */
+            }
+        }
+
+        /* Ajustes para dispositivos móveis */
+        @media (max-width: 600px) {
+            .card {
+                padding: 20px 30px; /* Reduz o padding */
+                max-width: 300px; /* Limita o tamanho máximo */
+            }
+
+            .card h1 {
+                font-size: 2rem; /* Ajusta o tamanho do título */
+            }
+
+            .card p {
+                font-size: 1.2rem; /* Ajusta o tamanho do texto */
             }
         }
     </style>
